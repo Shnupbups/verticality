@@ -1,0 +1,20 @@
+{
+  "id": "verticality",
+  "name": "Verticality",
+  "description": "Provides a variety of solutions for vertical movement!",
+  "authors": [
+    "Glowpelt <glowpelt@chakat.space> (https://chakat.space)"
+  ],
+  "version": "1.0.0",
+  "side": "universal",
+  "initializers": [
+    "space.chakat.verticality.Verticality"
+  ],
+  "requires": {
+    "fabric": "*"
+  },
+  "mixins": {
+    "client": "verticality.client.json",
+    "common": "verticality.common.json"
+  }
+}

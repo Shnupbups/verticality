@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "space.chakat.verticality.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinLivingEntity"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
