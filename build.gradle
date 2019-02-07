@@ -9,7 +9,7 @@ targetCompatibility = 1.8
 
 archivesBaseName = "verticality"
 group = 'space.chakat'
-version = "1.0.0"
+version = "0.1.0"
 
 minecraft {
 }

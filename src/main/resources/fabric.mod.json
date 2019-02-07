@@ -5,7 +5,7 @@
   "authors": [
     "Glowpelt <glowpelt@chakat.space> (https://chakat.space)"
   ],
-  "version": "1.0.0",
+  "version": "0.1.0",
   "side": "universal",
   "initializers": [
     "space.chakat.verticality.Verticality"
