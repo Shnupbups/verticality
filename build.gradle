@@ -23,6 +23,8 @@ dependencies {
 	modCompile "net.fabricmc:fabric:0.1.5.88"
 }
 
+// Not letting me do anything gradle, error of something like "Project artifact not configured"
+/*
 curseforge {
 	if (project.hasProperty('curseForgeApiKey')) {
 		apiKey = project.properties.curseForgeApiKey
@@ -48,6 +50,7 @@ curseforge {
 afterEvaluate {
 	tasks.curseforge313491.dependsOn remapJar
 }
+*/
 
 // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
 // if it is present.
