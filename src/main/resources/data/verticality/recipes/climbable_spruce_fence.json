@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget",
+      "data": 0
+    },
+    {
+      "item": "minecraft:spruce_fence",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "verticality:climbable_spruce_fence",
+    "count": 1
+  }
+}
