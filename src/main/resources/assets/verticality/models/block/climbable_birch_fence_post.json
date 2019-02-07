@@ -1,0 +1,6 @@
+{
+    "parent": "verticality:block/climbable_fence_post",
+    "textures": {
+        "texture": "block/birch_planks"
+    }
+}

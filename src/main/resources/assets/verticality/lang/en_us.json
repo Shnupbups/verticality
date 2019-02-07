@@ -1,3 +1,10 @@
 {
-  "block.verticality.climbable_bars": "Climbable Bars"
+  "block.verticality.climbable_bars": "Climbable Bars",
+  "block.verticality.climbable_oak_fence": "Climbable Oak Fence",
+  "block.verticality.climbable_birch_fence": "Climbable Birch Fence",
+  "block.verticality.climbable_jungle_fence": "Climbable Jungle Fence",
+  "block.verticality.climbable_spruce_fence": "Climbable Spruce Fence",
+  "block.verticality.climbable_acacia_fence": "Climbable Acacia Fence",
+  "block.verticality.climbable_dark_oak_fence": "Climbable Dark Oak Fence",
+  "block.verticality.climbable_nether_brick_fence": "Climbable Nether Brick Fence"
 }

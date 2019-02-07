@@ -1,0 +1,11 @@
+{
+  "values": [
+    "verticality:climbable_oak_fence",
+    "verticality:climbable_spruce_fence",
+    "verticality:climbable_birch_fence",
+    "verticality:climbable_jungle_fence",
+    "verticality:climbable_acacia_fence",
+    "verticality:climbable_dark_oak_fence",
+    "verticality:climbable_nether_brick_fence"
+  ]
+}

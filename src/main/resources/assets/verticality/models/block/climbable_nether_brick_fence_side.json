@@ -1,0 +1,6 @@
+{
+    "parent": "verticality:block/climbable_fence_side",
+    "textures": {
+        "texture": "block/nether_bricks"
+    }
+}

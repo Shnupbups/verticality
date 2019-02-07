@@ -1,0 +1,6 @@
+{
+    "parent": "verticality:block/climbable_fence_inventory",
+    "textures": {
+        "texture": "block/acacia_planks"
+    }
+}
