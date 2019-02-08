@@ -1,7 +1,6 @@
 package space.chakat.verticality;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Block.Settings;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -9,22 +8,14 @@ import space.chakat.verticality.block.ClimbableBarsBlock;
 import space.chakat.verticality.block.ClimbableFenceBlock;
 
 public final class VBlocks {
-  public static final Block CLIMBABLE_BARS =
-      new ClimbableBarsBlock(Settings.copy(Blocks.IRON_BARS).strength(5.5f, 6.0f));
-  public static final Block CLIMBABLE_OAK_FENCE =
-      new ClimbableFenceBlock(Settings.copy(Blocks.OAK_FENCE).strength(2.5f, 3.0f));
-  public static final Block CLIMBABLE_SPRUCE_FENCE =
-      new ClimbableFenceBlock(Settings.copy(Blocks.SPRUCE_FENCE).strength(2.5f, 3.0f));
-  public static final Block CLIMBABLE_BIRCH_FENCE =
-      new ClimbableFenceBlock(Settings.copy(Blocks.BIRCH_FENCE).strength(2.5f, 3.0f));
-  public static final Block CLIMBABLE_JUNGLE_FENCE =
-      new ClimbableFenceBlock(Settings.copy(Blocks.JUNGLE_FENCE).strength(2.5f, 3.0f));
-  public static final Block CLIMBABLE_ACACIA_FENCE =
-      new ClimbableFenceBlock(Settings.copy(Blocks.ACACIA_FENCE).strength(2.5f, 3.0f));
-  public static final Block CLIMBABLE_DARK_OAK_FENCE =
-      new ClimbableFenceBlock(Settings.copy(Blocks.DARK_OAK_FENCE).strength(2.5f, 3.0f));
-  public static final Block CLIMBABLE_NETHER_BRICK_FENCE =
-      new ClimbableFenceBlock(Settings.copy(Blocks.NETHER_BRICK_FENCE).strength(2.5f, 6.0f));
+  public static final Block CLIMBABLE_BARS = new ClimbableBarsBlock(Blocks.IRON_BARS);
+  public static final Block CLIMBABLE_OAK_FENCE = new ClimbableFenceBlock(Blocks.OAK_FENCE);
+  public static final Block CLIMBABLE_SPRUCE_FENCE = new ClimbableFenceBlock(Blocks.SPRUCE_FENCE);
+  public static final Block CLIMBABLE_BIRCH_FENCE = new ClimbableFenceBlock(Blocks.BIRCH_FENCE);
+  public static final Block CLIMBABLE_JUNGLE_FENCE = new ClimbableFenceBlock(Blocks.JUNGLE_FENCE);
+  public static final Block CLIMBABLE_ACACIA_FENCE = new ClimbableFenceBlock(Blocks.ACACIA_FENCE);
+  public static final Block CLIMBABLE_DARK_OAK_FENCE = new ClimbableFenceBlock(Blocks.DARK_OAK_FENCE);
+  public static final Block CLIMBABLE_NETHER_BRICK_FENCE = new ClimbableFenceBlock(Blocks.NETHER_BRICK_FENCE);
 
   private VBlocks() {
     throw new UnsupportedOperationException();
