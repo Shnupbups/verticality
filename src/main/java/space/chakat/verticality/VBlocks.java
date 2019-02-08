@@ -27,7 +27,7 @@ public final class VBlocks {
       new ClimbableFenceBlock(Settings.copy(Blocks.NETHER_BRICK_FENCE).strength(2.5f, 6.0f));
 
   private VBlocks() {
-    throw new RuntimeException("VItems can't be initialized!");
+    throw new UnsupportedOperationException();
   }
 
   static void registerAll() {

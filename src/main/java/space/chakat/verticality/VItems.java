@@ -21,7 +21,7 @@ public final class VItems {
       new BlockItem(VBlocks.climbableNetherBrickFence, set);
 
   private VItems() {
-    throw new RuntimeException("VItems can't be initialized!");
+    throw new UnsupportedOperationException();
   }
 
   static void registerAll() {
