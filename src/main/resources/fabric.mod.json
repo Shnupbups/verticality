@@ -16,7 +16,7 @@
     "fabric": "*"
   },
   "mixins": {
-    "client": "verticality.client.json",
-    "common": "verticality.common.json"
+    "client": "mixins.verticality.client.json",
+    "common": "mixins.verticality.common.json"
   }
 }
