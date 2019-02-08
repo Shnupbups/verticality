@@ -4,7 +4,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.BlockPos;
 
-public interface IClimbable {
+public interface Climbable {
 
   /** If the block is climbable.
    * @param entity The entity to check for climbing.

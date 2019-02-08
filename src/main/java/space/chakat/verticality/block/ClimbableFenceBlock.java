@@ -1,13 +1,13 @@
-package space.chakat.verticality.blocks;
+package space.chakat.verticality.block;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.PaneBlock;
+import net.minecraft.block.FenceBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.BlockPos;
-import space.chakat.verticality.IClimbable;
+import space.chakat.verticality.Climbable;
 
-public class BlockClimbableBars extends PaneBlock implements IClimbable {
-  public BlockClimbableBars(Settings settings) {
+public class ClimbableFenceBlock extends FenceBlock implements Climbable {
+  public ClimbableFenceBlock(Settings settings) {
     super(settings);
   }
 

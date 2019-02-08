@@ -2,38 +2,39 @@ package space.chakat.verticality.mixin;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-import space.chakat.verticality.IClimbable;
-import space.chakat.verticality.blocks.BlockClimbableFence;
+import space.chakat.verticality.Climbable;
+import space.chakat.verticality.block.ClimbableFenceBlock;
 
 @Mixin(LivingEntity.class)
-public class MixinLivingEntity {
+abstract class MixinLivingEntity extends Entity {
+
+  private MixinLivingEntity() {
+    super(null, null);
+  }
+
   @Inject(
       method = "canClimb",
-      at =
-          @At(
-              value = "INVOKE_ASSIGN",
-              target = "Lnet/minecraft/block/BlockState;getBlock()Lnet/minecraft/block/Block;"),
+      at = @At(value = "RETURN", ordinal = 2),
       locals = LocalCapture.CAPTURE_FAILHARD,
+      allow = 1,
       cancellable = true)
-  public void onCanClimb(CallbackInfoReturnable<Boolean> cir, BlockState state, Block block) {
-    LivingEntity thisEntity = (LivingEntity) (Object) this;
-    BlockPos pos = new BlockPos(thisEntity);
-    if (block instanceof IClimbable) {
-      IClimbable climbable = (IClimbable) block;
-      cir.setReturnValue(climbable.canClimb(thisEntity, state, thisEntity.getPos()));
-    } else if ((thisEntity.world.getBlockState(pos.down()).getBlock()
-            instanceof BlockClimbableFence)
-        && (thisEntity.y - (long) thisEntity.y < 0.5)) {
-      // I really don't like this elseif to make the fences work, and it feels abusable, still, and
-      // makes this code feel uglier and more hacked-together. _sigh_
-      cir.setReturnValue(true);
+  void onCanClimb(
+      final CallbackInfoReturnable<Boolean> cir, final BlockState state, final Block block) {
+    if (block instanceof Climbable) {
+      final LivingEntity thisEntity = (LivingEntity) (Object) this;
+      cir.setReturnValue(((Climbable) block).canClimb(thisEntity, state, this.getPos()));
+    } else if (world.getBlockState(new BlockPos(this.x, this.y - 0.5, this.z)).getBlock()
+        instanceof ClimbableFenceBlock) {
+      cir.setReturnValue(y - MathHelper.floor(y) < 0.5);
     }
   }
 }
