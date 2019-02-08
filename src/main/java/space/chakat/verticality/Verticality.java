@@ -2,7 +2,7 @@ package space.chakat.verticality;
 
 import net.fabricmc.api.ModInitializer;
 
-public class Verticality implements ModInitializer {
+public final class Verticality implements ModInitializer {
 
   public static final String ID = "verticality";
   public static final String NAME = "Verticality";
