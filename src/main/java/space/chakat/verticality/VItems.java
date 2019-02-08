@@ -8,31 +8,31 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public final class VItems {
-  private static final Settings set = new Settings().itemGroup(ItemGroup.DECORATIONS);
-  public static final Item climbableBars = new BlockItem(VBlocks.climbableBars, set);
-  public static final Item climbableOakFence = new BlockItem(VBlocks.climbableOakFence, set);
-  public static final Item climbableSpruceFence = new BlockItem(VBlocks.climbableSpruceFence, set);
-  public static final Item climbableBirchFence = new BlockItem(VBlocks.climbableBirchFence, set);
-  public static final Item climbableJungleFence = new BlockItem(VBlocks.climbableJungleFence, set);
-  public static final Item climbableAcaciaFence = new BlockItem(VBlocks.climbableAcaciaFence, set);
-  public static final Item climbableDarkOakFence =
-      new BlockItem(VBlocks.climbableDarkOakFence, set);
-  public static final Item climbableNetherBrickFence =
-      new BlockItem(VBlocks.climbableNetherBrickFence, set);
+  private static final Settings SET = new Settings().itemGroup(ItemGroup.DECORATIONS);
+  public static final Item CLIMBABLE_BARS = new BlockItem(VBlocks.CLIMBABLE_BARS, SET);
+  public static final Item CLIMBABLE_OAK_FENCE = new BlockItem(VBlocks.CLIMBABLE_OAK_FENCE, SET);
+  public static final Item CLIMBABLE_SPRUCE_FENCE = new BlockItem(VBlocks.CLIMBABLE_SPRUCE_FENCE, SET);
+  public static final Item CLIMBABLE_BIRCH_FENCE = new BlockItem(VBlocks.CLIMBABLE_BIRCH_FENCE, SET);
+  public static final Item CLIMBABLE_JUNGLE_FENCE = new BlockItem(VBlocks.CLIMBABLE_JUNGLE_FENCE, SET);
+  public static final Item CLIMBABLE_ACACIA_FENCE = new BlockItem(VBlocks.CLIMBABLE_ACACIA_FENCE, SET);
+  public static final Item CLIMBABLE_DARK_OAK_FENCE =
+      new BlockItem(VBlocks.CLIMBABLE_DARK_OAK_FENCE, SET);
+  public static final Item CLIMBABLE_NETHER_BRICK_FENCE =
+      new BlockItem(VBlocks.CLIMBABLE_NETHER_BRICK_FENCE, SET);
 
   private VItems() {
     throw new UnsupportedOperationException();
   }
 
   static void registerAll() {
-    register("climbable_bars", climbableBars);
-    register("climbable_oak_fence", climbableOakFence);
-    register("climbable_spruce_fence", climbableSpruceFence);
-    register("climbable_birch_fence", climbableBirchFence);
-    register("climbable_jungle_fence", climbableJungleFence);
-    register("climbable_acacia_fence", climbableAcaciaFence);
-    register("climbable_dark_oak_fence", climbableDarkOakFence);
-    register("climbable_nether_brick_fence", climbableNetherBrickFence);
+    register("climbable_bars", CLIMBABLE_BARS);
+    register("climbable_oak_fence", CLIMBABLE_OAK_FENCE);
+    register("climbable_spruce_fence", CLIMBABLE_SPRUCE_FENCE);
+    register("climbable_birch_fence", CLIMBABLE_BIRCH_FENCE);
+    register("climbable_jungle_fence", CLIMBABLE_JUNGLE_FENCE);
+    register("climbable_acacia_fence", CLIMBABLE_ACACIA_FENCE);
+    register("climbable_dark_oak_fence", CLIMBABLE_DARK_OAK_FENCE);
+    register("climbable_nether_brick_fence", CLIMBABLE_NETHER_BRICK_FENCE);
   }
 
   private static Item register(String id, Item item) {

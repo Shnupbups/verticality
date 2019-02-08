@@ -9,21 +9,21 @@ import space.chakat.verticality.block.ClimbableBarsBlock;
 import space.chakat.verticality.block.ClimbableFenceBlock;
 
 public final class VBlocks {
-  public static final Block climbableBars =
+  public static final Block CLIMBABLE_BARS =
       new ClimbableBarsBlock(Settings.copy(Blocks.IRON_BARS).strength(5.5f, 6.0f));
-  public static final Block climbableOakFence =
+  public static final Block CLIMBABLE_OAK_FENCE =
       new ClimbableFenceBlock(Settings.copy(Blocks.OAK_FENCE).strength(2.5f, 3.0f));
-  public static final Block climbableSpruceFence =
+  public static final Block CLIMBABLE_SPRUCE_FENCE =
       new ClimbableFenceBlock(Settings.copy(Blocks.SPRUCE_FENCE).strength(2.5f, 3.0f));
-  public static final Block climbableBirchFence =
+  public static final Block CLIMBABLE_BIRCH_FENCE =
       new ClimbableFenceBlock(Settings.copy(Blocks.BIRCH_FENCE).strength(2.5f, 3.0f));
-  public static final Block climbableJungleFence =
+  public static final Block CLIMBABLE_JUNGLE_FENCE =
       new ClimbableFenceBlock(Settings.copy(Blocks.JUNGLE_FENCE).strength(2.5f, 3.0f));
-  public static final Block climbableAcaciaFence =
+  public static final Block CLIMBABLE_ACACIA_FENCE =
       new ClimbableFenceBlock(Settings.copy(Blocks.ACACIA_FENCE).strength(2.5f, 3.0f));
-  public static final Block climbableDarkOakFence =
+  public static final Block CLIMBABLE_DARK_OAK_FENCE =
       new ClimbableFenceBlock(Settings.copy(Blocks.DARK_OAK_FENCE).strength(2.5f, 3.0f));
-  public static final Block climbableNetherBrickFence =
+  public static final Block CLIMBABLE_NETHER_BRICK_FENCE =
       new ClimbableFenceBlock(Settings.copy(Blocks.NETHER_BRICK_FENCE).strength(2.5f, 6.0f));
 
   private VBlocks() {
@@ -31,14 +31,14 @@ public final class VBlocks {
   }
 
   static void registerAll() {
-    register("climbable_bars", climbableBars);
-    register("climbable_oak_fence", climbableOakFence);
-    register("climbable_spruce_fence", climbableSpruceFence);
-    register("climbable_birch_fence", climbableBirchFence);
-    register("climbable_jungle_fence", climbableJungleFence);
-    register("climbable_acacia_fence", climbableAcaciaFence);
-    register("climbable_dark_oak_fence", climbableDarkOakFence);
-    register("climbable_nether_brick_fence", climbableNetherBrickFence);
+    register("climbable_bars", CLIMBABLE_BARS);
+    register("climbable_oak_fence", CLIMBABLE_OAK_FENCE);
+    register("climbable_spruce_fence", CLIMBABLE_SPRUCE_FENCE);
+    register("climbable_birch_fence", CLIMBABLE_BIRCH_FENCE);
+    register("climbable_jungle_fence", CLIMBABLE_JUNGLE_FENCE);
+    register("climbable_acacia_fence", CLIMBABLE_ACACIA_FENCE);
+    register("climbable_dark_oak_fence", CLIMBABLE_DARK_OAK_FENCE);
+    register("climbable_nether_brick_fence", CLIMBABLE_NETHER_BRICK_FENCE);
   }
 
   private static Block register(String id, Block block) {
