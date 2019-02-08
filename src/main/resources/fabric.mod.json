@@ -3,13 +3,15 @@
   "name": "Verticality",
   "description": "Provides a variety of solutions for vertical movement!",
   "authors": [
-    "Glowpelt <glowpelt@chakat.space> (https://chakat.space)"
+    {
+      "name": "Glowpelt",
+      "email": "glowpelt@chakat.space",
+      "website": "https://chakat.space"
+    }
   ],
   "version": "0.1.0",
   "side": "universal",
-  "initializers": [
-    "space.chakat.verticality.Verticality"
-  ],
+  "initializer": "space.chakat.verticality.Verticality",
   "requires": {
     "fabric": "*"
   },
