@@ -9,7 +9,7 @@ public class ClimbableFenceBlock extends FenceBlock implements Climbable {
     super(settings);
   }
 
-  public ClimbableFenceBlock(Block type) {
-    this(Settings.copy(type));
+  public ClimbableFenceBlock(Block type, float hardness, float resistance) {
+    this(Settings.copy(type).strength(hardness, resistance));
   }
 }

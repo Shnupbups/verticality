@@ -9,7 +9,7 @@ public class ClimbableBarsBlock extends PaneBlock implements Climbable {
     super(settings);
   }
 
-  public ClimbableBarsBlock(Block type) {
-    this(Settings.copy(type));
+  public ClimbableBarsBlock(Block type, float hardness, float resistance) {
+    this(Settings.copy(type).strength(hardness, resistance));
   }
 }
