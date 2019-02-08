@@ -8,17 +8,16 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public final class VItems {
-  private static final Settings SET = new Settings().itemGroup(ItemGroup.DECORATIONS);
-  public static final Item CLIMBABLE_BARS = new BlockItem(VBlocks.CLIMBABLE_BARS, SET);
-  public static final Item CLIMBABLE_OAK_FENCE = new BlockItem(VBlocks.CLIMBABLE_OAK_FENCE, SET);
-  public static final Item CLIMBABLE_SPRUCE_FENCE = new BlockItem(VBlocks.CLIMBABLE_SPRUCE_FENCE, SET);
-  public static final Item CLIMBABLE_BIRCH_FENCE = new BlockItem(VBlocks.CLIMBABLE_BIRCH_FENCE, SET);
-  public static final Item CLIMBABLE_JUNGLE_FENCE = new BlockItem(VBlocks.CLIMBABLE_JUNGLE_FENCE, SET);
-  public static final Item CLIMBABLE_ACACIA_FENCE = new BlockItem(VBlocks.CLIMBABLE_ACACIA_FENCE, SET);
+  public static final Item CLIMBABLE_BARS = new BlockItem(VBlocks.CLIMBABLE_BARS, createSettings());
+  public static final Item CLIMBABLE_OAK_FENCE = new BlockItem(VBlocks.CLIMBABLE_OAK_FENCE, createSettings());
+  public static final Item CLIMBABLE_SPRUCE_FENCE = new BlockItem(VBlocks.CLIMBABLE_SPRUCE_FENCE, createSettings());
+  public static final Item CLIMBABLE_BIRCH_FENCE = new BlockItem(VBlocks.CLIMBABLE_BIRCH_FENCE, createSettings());
+  public static final Item CLIMBABLE_JUNGLE_FENCE = new BlockItem(VBlocks.CLIMBABLE_JUNGLE_FENCE, createSettings());
+  public static final Item CLIMBABLE_ACACIA_FENCE = new BlockItem(VBlocks.CLIMBABLE_ACACIA_FENCE, createSettings());
   public static final Item CLIMBABLE_DARK_OAK_FENCE =
-      new BlockItem(VBlocks.CLIMBABLE_DARK_OAK_FENCE, SET);
+      new BlockItem(VBlocks.CLIMBABLE_DARK_OAK_FENCE, createSettings());
   public static final Item CLIMBABLE_NETHER_BRICK_FENCE =
-      new BlockItem(VBlocks.CLIMBABLE_NETHER_BRICK_FENCE, SET);
+      new BlockItem(VBlocks.CLIMBABLE_NETHER_BRICK_FENCE, createSettings());
 
   private VItems() {
     throw new UnsupportedOperationException();
@@ -37,5 +36,9 @@ public final class VItems {
 
   private static Item register(String id, Item item) {
     return Registry.ITEM.register(new Identifier(Verticality.ID, id), item);
+  }
+  
+  private static Settings createSettings() {
+    return new Settings().itemGroup(ItemGroup.DECORATIONS);
   }
 }
