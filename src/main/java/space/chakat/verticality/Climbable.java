@@ -12,5 +12,7 @@ public interface Climbable {
    * @param position The position of the block.
    * @return If the entity can climb.
    */
-  boolean canClimb(LivingEntity entity, BlockState state, BlockPos position);
+  default boolean canClimb(LivingEntity entity, BlockState state, BlockPos position) {
+    return true;
+  }
 }
