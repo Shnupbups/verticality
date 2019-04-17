@@ -22,15 +22,15 @@ abstract class MixinLivingEntity extends Entity {
   }
 
   @Inject(
-    method = "canClimb",
+    method = "isClimbing",
     at = @At(value = "RETURN", ordinal = 2),
     locals = LocalCapture.CAPTURE_FAILHARD,
     allow = 1,
     cancellable = true)
-  void onCanClimb(final CallbackInfoReturnable<Boolean> cir, final BlockState state, final Block block) {
+  void onIsClimbing(final CallbackInfoReturnable<Boolean> cir, final BlockState state, final Block block) {
     if (block instanceof Climbable) {
       final LivingEntity self = (LivingEntity) (Object) this;
-      cir.setReturnValue(((Climbable) block).canClimb(self, state, getPos()));
+      cir.setReturnValue(((Climbable) block).canClimb(self, state, new BlockPos(this)));
     } else {
       final BlockPos down = new BlockPos(x, y - 0.5, z);
       final Block below = world.getBlockState(down).getBlock();

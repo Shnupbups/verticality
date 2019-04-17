@@ -34,7 +34,7 @@ public final class VItems {
   }
 
   private static Item register(String id, Item item) {
-    return Registry.ITEM.register(new Identifier(Verticality.ID, id), item);
+    return Registry.register(Registry.ITEM, new Identifier(Verticality.ID, id), item);
   }
 
   private static Item newBlockItem(Block block) {

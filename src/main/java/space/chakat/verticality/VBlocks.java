@@ -33,6 +33,6 @@ public final class VBlocks {
   }
 
   private static Block register(String id, Block block) {
-    return Registry.BLOCK.register(new Identifier(Verticality.ID, id), block);
+    return Registry.register(Registry.BLOCK, new Identifier(Verticality.ID, id), block);
   }
 }
