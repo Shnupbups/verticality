@@ -14,6 +14,9 @@ gradle.properties
 *.ipr
 *.iws
 
+# I think this is IDEA
+classes/
+
 # vscode
 
 .settings/
