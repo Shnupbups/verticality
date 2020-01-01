@@ -1,10 +1,10 @@
 package space.chakat.verticality;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.block.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -38,6 +38,6 @@ public final class VItems {
   }
 
   private static Item newBlockItem(Block block) {
-    return new BlockItem(block, new Settings().itemGroup(ItemGroup.DECORATIONS));
+    return new BlockItem(block, new Settings().group(ItemGroup.DECORATIONS));
   }
 }

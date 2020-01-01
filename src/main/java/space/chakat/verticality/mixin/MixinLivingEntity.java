@@ -32,10 +32,10 @@ abstract class MixinLivingEntity extends Entity {
       final LivingEntity self = (LivingEntity) (Object) this;
       cir.setReturnValue(((Climbable) block).canClimb(self, state, new BlockPos(this)));
     } else {
-      final BlockPos down = new BlockPos(x, y - 0.5, z);
+      final BlockPos down = getBlockPos().down();
       final Block below = world.getBlockState(down).getBlock();
       if (below instanceof ClimbableFenceBlock) {
-        cir.setReturnValue(y - MathHelper.floor(y) < 0.5);
+        cir.setReturnValue(getY() - MathHelper.floor(getY()) < 0.5);
       }
     }
   }

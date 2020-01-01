@@ -22,6 +22,9 @@
   "entrypoints": {
     "main": [
       "space.chakat.verticality.Verticality"
+    ],
+    "client": [
+      "space.chakat.verticality.VerticalityClient"
     ]
   },
   "mixins": [
